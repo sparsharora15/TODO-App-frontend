@@ -40,6 +40,7 @@ export const deleteTask = async (id,token) => {
     return axios.post(BASE_URL + "task/deleteTask",data,config)
 }
 export const login = (data) => {
+    console.log(data)
     return axios.post(BASE_URL + "signin",data)
 }
 export const taskOfAUser = (token) => {

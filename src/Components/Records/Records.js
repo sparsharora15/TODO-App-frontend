@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/Auth/AuthContext'
 const Records = (props) => {
     const {state} = useContext(AuthContext)
     const delTask = async (id) => {
-        await deleteTask(id,state.token)
+        await deleteTask(id,localStorage.getItem("userToken"))
         alert('Deleted')
         props.reload()
     }
